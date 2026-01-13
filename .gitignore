@@ -1,0 +1,12 @@
+# Backend
+Backend/node_modules
+Backend/.env
+
+# Frontend
+billing-frontend/node_modules
+billing-frontend/.env
+
+# Common
+.env
+dist
+build

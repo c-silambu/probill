@@ -1,0 +1,173 @@
+.product-page {
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* ===== Glass Box ===== */
+.glass-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  animation: slideUp 1s ease forwards;
+}
+
+/* ===== Form ===== */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.product-form input,
+.product-form select {
+  flex: 1;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s;
+  outline: none;
+}
+
+.product-form input:focus,
+.product-form select:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.02);
+}
+
+.submit-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #fff, #aaa);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ===== Message ===== */
+.status-message {
+  text-align: center;
+  margin-top: 12px;
+  color: #bfbfbf;
+  font-weight: 500;
+}
+
+/* ===== Table ===== */
+.table-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: fadeIn 1s ease;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product-table th {
+  color: #ccc;
+  font-weight: 600;
+}
+
+.product-table tr:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transition: 0.3s;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  color: #00ffb3;
+  transform: scale(1.2);
+}
+
+.delete-btn:hover {
+  color: #ff5c5c;
+  transform: scale(1.2);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.fade-in { animation: fadeIn 1s ease forwards; }
+.slide-up { animation: slideUp 1s ease forwards; }
+
+.table-row-animate {
+  animation: fadeIn 0.7s ease;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+
+  .product-table th,
+  .product-table td {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+  }
+}

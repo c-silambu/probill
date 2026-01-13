@@ -1,0 +1,161 @@
+.dashboard {
+  padding: 40px;
+  color: #fff;
+  background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  animation: fadeIn 1.2s ease;
+}
+
+/* ===== Loading text ===== */
+.loading-text {
+  color: #aaa;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+/* ===== KPI Cards ===== */
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(8px);
+}
+
+.card h4 {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Glass Boxes ===== */
+.glass-box {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.03);
+  margin-bottom: 35px;
+}
+
+/* ===== Tables ===== */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.styled-table th {
+  color: #bbb;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.styled-table td {
+  color: #fff;
+  font-size: 15px;
+}
+
+.styled-table tr:hover td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.total-row td {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* ===== Category Summary ===== */
+.category-summary h3,
+.recent-bills h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.category-title {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #eee;
+  border-left: 3px solid #fff;
+  padding-left: 10px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .dashboard-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .glass-box {
+    padding: 15px;
+  }
+
+  .styled-table th, .styled-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

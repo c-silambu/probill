@@ -1,0 +1,180 @@
+/* ===== Base ===== */
+.summary-page {
+  background: linear-gradient(135deg, #000, #1a1a1a);
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+  animation: slideDown 1s ease forwards;
+}
+
+.summary-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.print-btn {
+  background: linear-gradient(90deg, #fff, #aaa);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.print-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ===== KPI Cards ===== */
+.kpi-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.kpi-card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease forwards;
+}
+
+.kpi-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.kpi-card h4 {
+  color: #ccc;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.kpi-card .value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ===== Category Summary ===== */
+.category-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 25px;
+}
+
+.category-box {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease;
+}
+
+.category-box h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 8px;
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+}
+
+th {
+  color: #aaa;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+tr:hover td {
+  background: rgba(255, 255, 255, 0.06);
+  transition: 0.3s;
+}
+
+.category-total td {
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== No Data ===== */
+.no-data {
+  text-align: center;
+  color: #bbb;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 1s ease forwards; }
+.slide-up { animation: fadeIn 1s ease; }
+.slide-down { animation: slideDown 1s ease; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .summary-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .kpi-container {
+    flex-direction: column;
+  }
+
+  .category-section {
+    grid-template-columns: 1fr;
+  }
+
+  .print-btn {
+    width: 100%;
+  }
+}
