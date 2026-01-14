@@ -6,7 +6,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     
   "start": "node app.js",  
-  "dev": "nodemon app.js"   
+  "dev": "nodemon app.js",
+  "type": "module",
+  "main": "app.js"
+
 
   },
   "keywords": [],

@@ -9,13 +9,11 @@ app.use(express.json());
 
 connectDB();
 
-app.use('/auth', require('./routes/authRoutes'));
-app.use('/product', require('./routes/productrouter'));
-app.use('/bill', require('./routes/billroutes'));
-app.use('/dashboard', require('./routes/dashbordroutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/product', require('./routes/productrouter'));
+app.use('/api/bill', require('./routes/billroutes'));
+app.use('/api/dashboard', require('./routes/dashbordroutes'));
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+
